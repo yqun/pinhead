@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛子</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-15deg) rotateY(-15deg);
+            animation: shaizi 6s linear infinite;
+        }
+        @keyframes shaizi{
+            from{
+                transform: rotateX(-30deg) rotateY(-15deg);
+            }
+            to{
+                transform: rotateX(-30deg) rotateY(-375deg);
+            }
+        }
+        .box > div {
+            box-sizing: border-box;
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            /* opacity: 0.3; */
+            position: absolute;
+            display: flex;
+            border-radius: 10px;
+        }
+        span {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+        }
+        .front {
+            align-items: center;
+            justify-content: center;
+            transform: rotateX(0deg) translateZ(50px);
+        }
+        .back {
+            flex-wrap: wrap;
+            align-content: center;
+            padding: 0 10px;
+            transform: rotateX(180deg) translateZ(50px);
+        }
+        .back span{
+            margin:  5px 5px;
+        }
+        .left {
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .left span  {
+            margin: 0 7px;
+        }
+        .right {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            padding: 10px;
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .right span {
+            margin: 0 10px;
+        }
+        .right span:nth-child(3) {
+            margin: 0 30px;
+        }
+        .top {
+            padding: 20px;
+            justify-content: space-around;
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .top span:nth-child(1) {
+            align-self: flex-end;
+        }
+        .top span:nth-child(2) {
+            align-self: center;
+        }
+        .top span:nth-child(3) {
+            align-self: start;
+        }
+        .bottom {
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        .bottom span {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="front"><span></span></div>
+        <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="left"><span></span><span></span></div>
+        <div class="right"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="top"><span></span><span></span><span></span></div>
+        <div class="bottom"><span></span><span></span><span></span><span></span></div>
+    </div>
+</body>
+</html>
