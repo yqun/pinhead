@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 250px;
+            height: 40px;
+            display: flex;
+            border: 2px solid #333;
+            border-right: none;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .box > div:first-child {
+            width: 150px;
+            background-color: #333;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .box::after {
+            width: 0;
+            height: 0;
+            content: '';
+            border: 20px solid transparent;
+            border-right: 14px solid #333;
+            position: absolute;
+            right: 0;
+            /* top 就是上边框的宽度  负值  */
+            top: -2px;
+        }
+
+        .box::before {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            right: 0;
+            /* 边框的宽度  正值 */
+            top: 2px;
+            z-index: 2;
+            /* 和上面的设置查两倍边框 */
+            border: 16px solid transparent;
+            border-right: 10px solid #fff;
+        }
+
+        .box > div:last-child {
+            width: 80px;
+            height: 36px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="left">会员返</div>
+    <div class="right">￥76.67</div>
+</div>
+
+
+    
+
+</body>
+</html>
