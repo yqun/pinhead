@@ -1,2 +1,2 @@
 <header lang="utf-8">
-ÐÂ½¨µÄtext
+new = > text
