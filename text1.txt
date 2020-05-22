@@ -1,3 +1,7 @@
 <header lang="utf-8">
+<<<<<<< HEAD
 
 git => text
+=======
+new = > text
+>>>>>>> new
